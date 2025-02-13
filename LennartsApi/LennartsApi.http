@@ -1,0 +1,6 @@
+@LennartsApi_HostAddress = http://localhost:5182
+
+GET {{LennartsApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LennartsApi", "LennartsApi\LennartsApi.csproj", "{199DB4A9-E0DA-4BC2-9839-87787679F227}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{AB573CBE-2604-4A1E-807B-786EE87D908B}"
+	ProjectSection(SolutionItems) = preProject
+		build.ps1 = build.ps1
+		deploy.ps1 = deploy.ps1
+		lennartsapideploy\values.yaml = lennartsapideploy\values.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "template", "template", "{5400F2D6-284D-4907-8633-4085BB2C37A5}"
+	ProjectSection(SolutionItems) = preProject
+		lennartsapideploy\templates\deployment.yaml = lennartsapideploy\templates\deployment.yaml
+		lennartsapideploy\templates\ingress.yaml = lennartsapideploy\templates\ingress.yaml
+		lennartsapideploy\templates\service.yaml = lennartsapideploy\templates\service.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{199DB4A9-E0DA-4BC2-9839-87787679F227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199DB4A9-E0DA-4BC2-9839-87787679F227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199DB4A9-E0DA-4BC2-9839-87787679F227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199DB4A9-E0DA-4BC2-9839-87787679F227}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5400F2D6-284D-4907-8633-4085BB2C37A5} = {AB573CBE-2604-4A1E-807B-786EE87D908B}
+	EndGlobalSection
+EndGlobal

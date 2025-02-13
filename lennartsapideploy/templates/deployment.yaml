@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lennartsapi
+  labels:
+    app: lennartsapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lennartsapi
+  template:
+    metadata:
+      labels:
+        app: lennartsapi
+    spec:
+      containers:
+        - name: lennartsapi
+          image: "{{ .Values.image }}"
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
