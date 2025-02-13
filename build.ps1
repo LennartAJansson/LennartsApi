@@ -1,6 +1,10 @@
 param (
-   [string]$version = "1.0.0.0"
+	#Remember - Linux is case sensitive
+	[string]$name = "LennartsApi",
+	[string]$version = "1.0.0.0"
 )
 
-docker build -f ./LennartsApi/Dockerfile -t registry.ubk3s:5000/lennartsapi:$version .
-docker push registry.ubk3s:5000/lennartsapi:$version
+$lname = $name.ToLower()
+
+docker build -f ./$name/Dockerfile -t registry.ubk3s:5000/$lname:$version .
+docker push registry.ubk3s:5000/$lname:$version

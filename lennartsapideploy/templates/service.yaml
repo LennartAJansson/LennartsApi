@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: lennartsapi
-  namespace: lennartsapi
+  name: {{.Values.name }}
+  namespace: {{.Values.name }}
 spec:
   ports:
   - name: http
     port: 80
   selector:
-    app: lennartsapi
+    app: {{.Values.name }}
 

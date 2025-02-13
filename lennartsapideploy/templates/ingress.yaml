@@ -1,19 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: lennartsapi
-  namespace: lennartsapi
+  name: {{.Values.name }}
+  namespace: {{.Values.name }}
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-  - host: lennartsapi.ubk3s
+  - host: {{.Values.name }}.ubk3s
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: lennartsapi
+            name: {{.Values.name }}
             port:
               number: 80

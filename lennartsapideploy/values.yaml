@@ -1,3 +1,4 @@
 image: "registry:5000/lennartsapi:1.0.0.0"
+name: "lennartsapi"
 
 #helm upgrade --install lennartsapi lennartsapideployment -n lennartsapi --create-namespace --set image=registry:5000/lennartsapi:1.0.0.2

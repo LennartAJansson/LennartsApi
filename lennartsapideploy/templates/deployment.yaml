@@ -8,14 +8,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: lennartsapi
+      app: {{.Values.name }}
   template:
     metadata:
       labels:
-        app: lennartsapi
+        app: {{.Values.name }}
     spec:
       containers:
-        - name: lennartsapi
+        - name: {{.Values.name }}
           image: "{{ .Values.image }}"
           imagePullPolicy: Always
           ports:
