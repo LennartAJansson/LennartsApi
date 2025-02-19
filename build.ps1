@@ -6,5 +6,5 @@ param (
 
 $lname = $name.ToLower()
 
-docker build -f ./$name/Dockerfile -t registry.ubk3s:5000/$lname:$version .
-docker push registry.ubk3s:5000/$lname:$version
+docker build -f ./$name/Dockerfile -t registry.ubk3s:5000/${lname}:$version .
+docker push registry.ubk3s:5000/${lname}:$version

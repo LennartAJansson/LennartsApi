@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lennartsapi
+  name: {{.Values.name }}
   labels:
-    app: lennartsapi
+    app: {{.Values.name }}
 spec:
   replicas: 1
   selector:

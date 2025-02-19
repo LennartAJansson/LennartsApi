@@ -2,10 +2,13 @@ using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.UseKestrel(options =>
+if (!builder.Environment.IsDevelopment())
 {
-  options.Listen(IPAddress.Any, 80);
-});
+  builder.WebHost.UseKestrel(options =>
+  {
+    options.Listen(IPAddress.Any, 80);
+  });
+}
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
